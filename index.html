@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>小帅之家</title>
+	<meta charset="utf-8">
+	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body id="top">
+
+	<!-- Banner -->
+	<!--
+To use a video as your background, set data-video to the name of your video without
+its extension (eg. images/banner). Your video must be available in both .mp4 and .webm
+formats to work correctly.
+-->
+	<section id="banner" data-video="images/banner">
+		<div class="inner">
+			<header>
+				<h1>小帅之家</h1>
+				<p>得道者多助，失道者寡助<br>
+				</p>
+			</header><a href="#main" class="more">Learn More</a>
+		</div>
+	</section>
+	<!-- Main -->
+	<div id="main">
+		<div class="inner">
+
+			<!-- Boxes -->
+			<div class="thumbnails">
+				<!-- Placeholder for dynamic content -->
+			</div>
+
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="inner">
+			<h2>欢迎加入我们</h2>
+			<p>联系我 </p>
+			<ul class="icons">
+				<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+				<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+				<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+			</ul>
+		</div>
+	</footer>
+	<!-- Scripts -->
+	<script>
+		// 后端提供的数据，这里假设是一个包含多条数据的数组
+		var backendDataArray = [
+			{
+				"Cover": "https://wechat-qjq.oss-cn-shenzhen.aliyuncs.com/WechatIMG130.jpeg",
+				"Title": "测试1",
+				"Introduction": "测试-小帅1",
+				"Link": "https://video.61mj.com/131_1709806566.mp4"
+			},
+			{
+				"Cover": "https://wechat-qjq.oss-cn-shenzhen.aliyuncs.com/WechatIMG130.jpeg",
+				"Title": "测试1",
+				"Introduction": "测试-小帅1",
+				"Link": "https://video.61mj.com/131_1709806566.mp4"
+			},
+			{
+				"Cover": "https://wechat-qjq.oss-cn-shenzhen.aliyuncs.com/WechatIMG130.jpeg",
+				"Title": "测试1",
+				"Introduction": "测试-小帅1",
+				"Link": "https://video.61mj.com/131_1709806566.mp4"
+			},
+			{
+				"Cover": "https://wechat-qjq.oss-cn-shenzhen.aliyuncs.com/WechatIMG130.jpeg",
+				"Title": "测试1",
+				"Introduction": "测试-小帅1",
+				"Link": "https://video.61mj.com/131_1709806566.mp4"
+			},
+			{
+				"Cover": "https://wechat-qjq.oss-cn-shenzhen.aliyuncs.com/WechatIMG130.jpeg",
+				"Title": "测试1",
+				"Introduction": "测试-小帅1",
+				"Link": "https://video.61mj.com/131_1709806566.mp4"
+			},
+			{
+				"Cover": "https://wechat-qjq.oss-cn-shenzhen.aliyuncs.com/WechatIMG130.jpeg",
+				"Title": "测试1",
+				"Introduction": "测试-小帅1",
+				"Link": "https://video.61mj.com/131_1709806566.mp4"
+			},
+		];
+
+		// 获取要填充数据的父元素
+		var thumbnailsContainer = document.querySelector('.thumbnails');
+
+		// 循环遍历后端数据数组，创建并填充每个盒子
+		backendDataArray.forEach(function (data) {
+			// 创建新的盒子，并填充后端数据
+			var box = document.createElement('div');
+			box.classList.add('box');
+			box.innerHTML = `
+<a href="${data.Link}" class="image fit"><img src="${data.Cover}" alt="" width="800" height="400"></a>
+<div class="inner">
+<h3>${data.Title}</h3>
+<p>${data.Introduction}</p>
+<a href="${data.Link}" class="button fit" data-poptrox="youtube,800x400">Watch</a>
+</div>
+`;
+
+			// 将新的盒子添加到父元素中
+			thumbnailsContainer.appendChild(box);
+		});
+	</script>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.poptrox.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
+
+</html>
